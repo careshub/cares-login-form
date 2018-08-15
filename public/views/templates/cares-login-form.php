@@ -14,7 +14,7 @@ if ( is_user_logged_in() ) :
 		do_action( 'cares_before_login_widget_loggedin' );
 
 
-		if ( function_exists( buddypress() ) ) : ?>
+		if ( function_exists( 'buddypress' ) ) : ?>
 
 			<div class="cares-login-widget-user-avatar">
 				<a href="<?php echo bp_loggedin_user_domain(); ?>">
