@@ -1,8 +1,8 @@
 ** Basic Usage **
-Use the shortcode [cares-login-form] to add a loging form to your page.
+Use the shortcode [cares-login-form] to add a login form to your page.
 
 ** Shortcode Parameters **
-* Add the parameter "show_logout_link" to be display a logout link in the place of the login form when the user is logged in. E.g. [cares-login-form show_logout_link="true"]
+* Add the parameter "show_logout_link" to display a logout link in the place of the login form when the user is logged in. E.g. [cares-login-form show_logout_link="true"]
 * Add the parameter "id" to override the default id, 'cares-login-widget-form'. E.g. [cares-login-form id="my-custom-id"]
 * Add the parameter "classes" to override the default class, 'standard-form'. E.g. [cares-login-form classes="one two"]
 
