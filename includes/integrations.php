@@ -20,7 +20,7 @@ function add_invisible_recaptcha_container() {
 		return;
 	}
 
-	$ic_setting = get_option( 'ic-wordpress-settings' );
+	$ic_setting = get_site_option( 'ic-wordpress-settings' );
 	if ( ! empty( $ic_setting['LF'] ) ) {
 		\InvisibleReCaptcha\Modules\WordPress\WordPressPublicModule::getInstance()->renderReCaptchaHolderHtmlCode();
 	}
