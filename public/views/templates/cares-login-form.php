@@ -1,5 +1,6 @@
 <?php
-$current_url = is_ssl() ? 'https://' : 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$current_url = is_ssl() ? 'https://' : 'http://';
+$current_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 if ( is_user_logged_in() ) :
 	if ( clf_get_param( 'show_logout_link' ) ) :
