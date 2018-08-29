@@ -39,6 +39,9 @@ function init() {
 	// Template loader class.
 	require_once( $base_path . 'includes/class-gamajo-template-loader.php' );
 	require_once( $base_path . 'public/public.php' );
+
+	// Support for interacting with other login plugins, like Invisible ReCAPTCHA
+	require_once( $base_path . 'includes/integrations.php' );
 }
 add_action( 'init', __NAMESPACE__ . '\\init', 2 );
 
