@@ -58,7 +58,7 @@ function render_shortcode( $atts ) {
 
 	$cares_login_form_params = $a;
 
-	$templates = new Gamajo_Template_Loader;
+	$templates = new Template_Loader;
 
 	ob_start();
 
