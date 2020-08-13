@@ -1,6 +1,10 @@
 <?php
 $current_url = is_ssl() ? 'https://' : 'http://';
 $current_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$redirect_url = $current_url;
+if ( ! empty( $_REQUEST['redirect_to'] ) ) {
+	$redirect_url = $_REQUEST['redirect_to'];
+}
 
 if ( is_user_logged_in() ) :
 	if ( clf_get_param( 'show_logout_link' ) ) :
@@ -69,7 +73,7 @@ if ( is_user_logged_in() ) :
 
 			<div class="forgetmenot"><label for="cares-login-widget-rememberme"><input name="rememberme" type="checkbox" id="cares-login-widget-rememberme" value="forever" /> <?php _e( 'Keep me logged in', 'cares-login-form' ); ?></label></div>
 
-			<input type="hidden" name="redirect_to" value="<?php echo $current_url; ?>" />
+			<input type="hidden" name="redirect_to" value="<?php echo $redirect_url; ?>" />
 
 			<div class="cares-login-action-login-register">
 				<input type="submit" name="cares-login-widget-submit" id="cares-login-widget-submit" value="<?php esc_attr_e( 'Log In', 'cares-login-form' ); ?>" />
