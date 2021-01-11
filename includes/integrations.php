@@ -16,13 +16,6 @@ namespace Cares_Login_Form\Integrations;
  * @return string HTML element for Google Invisible Recaptcha to use.
  */
 function add_invisible_recaptcha_container() {
-	if ( ! class_exists( '\InvisibleReCaptcha\Modules\WordPress\WordPressPublicModule' ) ) {
-		return;
-	}
-
-	$ic_setting = get_site_option( 'ic-wordpress-settings' );
-	if ( ! empty( $ic_setting['LF'] ) ) {
-		\InvisibleReCaptcha\Modules\WordPress\WordPressPublicModule::getInstance()->renderReCaptchaHolderHtmlCode();
-	}
+	do_action( 'google_invre_render_widget_action' );
 }
 add_action( 'cares_login_widget_form',  __NAMESPACE__ . '\\add_invisible_recaptcha_container' );
