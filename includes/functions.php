@@ -38,13 +38,16 @@ function clf_get_param( $param ) {
 function cares_login_form_css() {
 	?>
 	<style type="text/css">
-		.cares-login-form label,
-		.cares-login-form .login-meta a {
+		.cares-login-form label {
 			display: block;
 			margin-bottom: .5em;
 		}
+		.cares-login-form .login-meta a {
+			display: block;
+		}
 		.cares-login-action-login-register {
 			display: block;
+		    margin: .5em 0;
 		}
 		.cares-login-widget-register-link {
 			float: right;
