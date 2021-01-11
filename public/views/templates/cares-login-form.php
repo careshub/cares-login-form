@@ -87,17 +87,27 @@ if ( is_user_logged_in() ) :
 				<?php endif; ?>
 			</div>
 
-			<p><a href="<?php echo wp_lostpassword_url( $current_url ); ?>" class="forgot-password">Forgot your password or username?</a></p>
+			<div class="login-meta">
+				<a href="<?php echo wp_lostpassword_url( $current_url ); ?>" class="forgot-password">Forgot your password or username?</a>
 
-			<?php
+				<?php
 
-			/**
-			 * Fires inside the display of the login widget form.
-			 *
-			 * @since 2.4.0
-			 */
-			do_action( 'cares_login_widget_form' ); ?>
+				/**
+				 * Fires inside the display of the login widget form.
+				 *
+				 * @since 2.4.0
+				 */
+				do_action( 'cares_login_widget_form' );
 
+
+				/**
+				 * Fires after the display of widget content if logged out.
+				 *
+				 * @since 1.9.0
+				 */
+				do_action( 'cares_after_login_form' );
+				?>
+			</div>
 		</form>
 	</div>
 
