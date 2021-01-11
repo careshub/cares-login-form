@@ -64,12 +64,14 @@ if ( is_user_logged_in() ) :
 		$form_classes = clf_get_param( 'classes' ) ? clf_get_param( 'classes' ) : 'standard-form';
 		?>
 
-		<form name="cares-login-form" id="<?php echo esc_attr( $form_id ); ?>" class="<?php echo esc_attr( $form_classes ); ?>" action="<?php echo esc_url( wp_login_url() ); ?>" method="post">
-			<label for="cares-login-widget-user-login"><?php _e( 'Username or email address', 'cares-login-form' ); ?></label>
-			<input type="text" name="log" id="cares-login-widget-user-login" class="input" value="" />
+		<form name="cares-login-form" id="<?php echo esc_attr( $form_id ); ?>" class="cares-login-form <?php echo esc_attr( $form_classes ); ?>" action="<?php echo esc_url( wp_login_url() ); ?>" method="post">
+			<label for="cares-login-widget-user-login"><?php _e( 'Username or email address', 'cares-login-form' ); ?> <br />
+				<input type="text" name="log" id="cares-login-widget-user-login" class="input" value="" />
+			</label>
 
-			<label for="cares-login-widget-user-pass"><?php _e( 'Password', 'cares-login-form' ); ?></label>
-			<input type="password" name="pwd" id="cares-login-widget-user-pass" class="input" value="" spellcheck="false" autocorrect=false autocapitalize="none" />
+			<label for="cares-login-widget-user-pass"><?php _e( 'Password', 'cares-login-form' ); ?> <br />
+				<input type="password" name="pwd" id="cares-login-widget-user-pass" class="input" value="" spellcheck="false" autocorrect=false autocapitalize="none" />
+			</label>
 
 			<div class="forgetmenot"><label for="cares-login-widget-rememberme"><input name="rememberme" type="checkbox" id="cares-login-widget-rememberme" value="forever" /> <?php _e( 'Keep me logged in', 'cares-login-form' ); ?></label></div>
 
