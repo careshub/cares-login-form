@@ -78,6 +78,18 @@ if ( is_user_logged_in() ) :
 			<input type="hidden" name="redirect_to" value="<?php echo $redirect_url; ?>" />
 
 			<div class="cares-login-action-login-register">
+				<?php
+
+				/**
+				 * Fires inside the display of the login widget form,
+				 * before the submit button
+				 *
+				 * @since 1.1.0
+				 */
+				do_action( 'cares_login_widget_form_before_submit' );
+
+				?>
+
 				<input type="submit" name="cares-login-widget-submit" id="cares-login-widget-submit" value="<?php esc_attr_e( 'Log In', 'cares-login-form' ); ?>" />
 
 				<?php if ( get_option( 'users_can_register' ) ) : ?>
@@ -95,7 +107,7 @@ if ( is_user_logged_in() ) :
 				/**
 				 * Fires inside the display of the login widget form.
 				 *
-				 * @since 2.4.0
+				 * @since 1.0.0
 				 */
 				do_action( 'cares_login_widget_form' );
 

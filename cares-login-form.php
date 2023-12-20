@@ -11,7 +11,7 @@
  * Plugin Name:       CARES Login Form
  * Plugin URI:        @TODO
  * Description:       Add a login form using a shortcode.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            dcavins
  * Text Domain:       cares-login-form
  * License:           GPL-2.0+
